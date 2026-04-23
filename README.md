@@ -1,5 +1,5 @@
 # **Teoria de la complejidad**
-
+---
 ## **Integrantes**
 
 - Miguel Alexander Maza Sinchi
@@ -8,12 +8,14 @@
 - Kevin Joel Sacaquirin Morocho
 - Anderson Israel Vallejo Loja
 
+---
 ## **¿Qué es la Teoría de la Complejidad?**
 
 La teoría de la complejidad es una rama de la informática que analiza cómo aumenta el costo de un algoritmo a medida que crece el tamaño de su entrada. Para ello utiliza la notación Big-O, que describe el crecimiento del tiempo de ejecución y el uso de memoria. 
 
 Su objetivo principal es comparar algoritmos y determinar cuál es más eficiente cuando los datos se vuelven grandes.
 
+---
 ## **Eficiencia de algoritmos**
 
 ### Coste temporal
@@ -56,6 +58,7 @@ Permite estimar su comportamiento con notaciones como Big O:
 Consiste en ejecutar el programa y medir su tiempo real.
 Se prueba con diferentes tamaños de entrada (n = 100, 1000, 10000) para observar su crecimiento.
 
+---
 ## **Notación Big O**
 
 ### ¿Qué es?
@@ -93,6 +96,7 @@ Combinación de recorrido + división del problema.
 - La notación Big O es fundamental para diseñar algoritmos escalables y evitar que el rendimiento se degrade al aumentar la cantidad de datos.
 - Permite comparar soluciones y elegir la más eficiente antes de implementarla.
 
+---
 ## Tipos de complejidad
 
 ### O(1) – Complejidad constante
