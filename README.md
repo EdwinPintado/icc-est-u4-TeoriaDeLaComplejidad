@@ -132,13 +132,13 @@ Esto significa que el algoritmo recorre todos los elementos, pero realiza divisi
 ## recursos visuales
 
 ### Ejemplo de como funciona el programa
-![Modelo de ejecución](assets/modelo-ejecución.png)
+[Ver modelo de ejecución](assets/modelo-ejecucion.png)
 ### Tabla comparativa entre complejidades
-![Tabla comparativa](assets/tabla-comparativa.png)
+[Ver tabla comparativa](assets/tabla-comparativa.png)
 ### Imagen extraida de nuestra presentacion
-![Presentacion](assets/presentacion.png)
+[Ver presentación](assets/presentacion.png)
 ### Imagen representariva de la reduccion logaritmica
-![Reduccion logaritmica](assets/reduccion-logaritmica.png)
+[Ver reducción logarítmica](assets/reduccion-logaritmica.png)
 
 
 ---
