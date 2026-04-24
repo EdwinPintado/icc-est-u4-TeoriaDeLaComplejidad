@@ -80,37 +80,6 @@ Representa el comportamiento esperado en condiciones normales.
 
 ### Notaciones importantes con ejemplos
 
-- O(1) – Constante
-El tiempo no depende del tamaño de entrada.
-
-- O(n) – Lineal
-Crece proporcionalmente al tamaño de entrada.
-
-- O(n²) – Cuadrática
-Crecimiento cuadrático debido a bucles anidados.
-
-- O(log n) – Logarítmica
-El problema se reduce progresivamente (ej: dividir entre 2).
-
-- O(n log n)
-Combinación de recorrido lineal + división del problema.
-
----
-
-## Ejemplos
-
-- [Ejemplos de Complejidad](#ejemplos-de-complejidad-en-java)
-
----
-
-### En conclusión
-
-- La notación Big O es fundamental para diseñar algoritmos escalables y evitar que el rendimiento se degrade al aumentar la cantidad de datos.
-- Permite comparar soluciones y elegir la más eficiente antes de implementarla.
-
----
-## Tipos de complejidad
-
 ### O(1) – Complejidad constante
 
 La complejidad O(1) significa que el tiempo o espacio que utiliza un algoritmo no cambia sin importar el tamaño de la entrada (n).
@@ -135,17 +104,31 @@ Es muy eficiente en grandes volúmenes de información.
 ### O(n log n) – Complejidad logarítmica lineal
 
 La complejidad O(n log n) combina dos comportamientos:
--	Un proceso lineal O(n)
--	Un proceso logarítmico O(log n)
+- Un proceso lineal O(n)
+- Un proceso logarítmico O(log n)
 Esto significa que el algoritmo recorre todos los elementos, pero realiza divisiones o procesos logarítmicos dentro de ese recorrido.
 
 ### En resumen:
 
--	O(1) → constante (ideal)
--	O(log n) → muy eficiente
--	O(n) → crecimiento proporcional
--	O(n log n) → eficiente para grandes datos
--	O(n²) → ineficiente en grandes volúmenes
+- O(1) → constante (ideal)
+- O(n) → crecimiento proporcional
+- O(n²) → ineficiente en grandes volúmenes
+- O(log n) → muy eficiente
+- O(n log n) → eficiente para grandes datos
+
+---
+
+## Ejemplos
+
+- [Ejemplos de Complejidad](#ejemplos-de-complejidad-en-java)
+
+---
+
+### En conclusión
+
+- La notación Big O es fundamental para diseñar algoritmos escalables y evitar que el rendimiento se degrade al aumentar la cantidad de datos.
+- Permite comparar soluciones y elegir la más eficiente antes de implementarla.
+
 
 ---
 
@@ -153,48 +136,146 @@ Esto significa que el algoritmo recorre todos los elementos, pero realiza divisi
 
 ### O(1) – Complejidad constante
 **Archivo:** ComplejidadConstante.java
+**Definición:** La complejidad O(1) ocurre cuando el algoritmo ejecuta una cantidad fija de operaciones, sin importar el tamaño de la entrada. En este caso, el código solo realiza operaciones simples como suma de variables, por lo que el tiempo de ejecución es constante.
+**Relación:** El método realiza operaciones aritméticas fijas sin bucles.
 ```java
 public void ejemplo() {
-    System.out.println("Ejemplo O(1)");
+        System.out.println("Ejemplo O(1)");
+
+        int x = 10;
+        int y = 20;
+        int suma = x + y;
+
+        System.out.println("Resultado: " + suma);
+    }
 }
 ```
+### Explicación de la complejidad
+- No hay bucles ni estructuras repetitivas
+- Solo se ejecutan operaciones fijas
+- Por lo tanto, siempre tarda lo mismo sin importar la entrada
 
 ---
 ### O(n) – Complejidad lineal
 **Archivo:** ComplejidadLineal.java
+**Definición:** La complejidad O(n) se presenta cuando el algoritmo recorre los datos una sola vez mediante un ciclo. En este caso, el número de iteraciones depende directamente del valor de n, por lo que el tiempo de ejecución crece de forma proporcional.
+**Relación:** El bucle for ejecuta n iteraciones.
 ```java
 public void ejemplo() {
-        System.out.println("Ejemplo O(n):");
+        System.out.println("Ejemplo O(n)");
+
+        int n = 5;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Iteración: " + i);
+        }
+    }
 }
 ```
+### Explicación de la complejidad
+- Existe un solo bucle que recorre n elementos
+- El número de operaciones crece proporcionalmente a n
+- Si n aumenta, el tiempo también aumenta en la misma proporción
 
 ---
 ### O(n²) – Complejidad cuadrática
 **Archivo:** ComplejidadCuadratica.java
+**Definición:** La complejidad O(n²) ocurre cuando el algoritmo utiliza dos ciclos anidados. En este caso, cada elemento es comparado o procesado con todos los demás, lo que genera un crecimiento cuadrático del número de operaciones.
+**Relación:** Dos bucles anidados generan n × n operaciones.
 ```java
 public void ejemplo() {
-        System.out.println("Ejemplo O(n^2):");
+        System.out.println("Ejemplo O(n²)");
+
+        int n = 3;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(i + "," + j);
+            }
+        }
+    }
 }
 ```
+### Explicación de la complejidad
+- Hay dos bucles anidados dependientes de n
+- Cada elemento se combina con todos los demás
+- El crecimiento es cuadrático (n × n)
 
 ---
 ### O(log n) – Complejidad logarítmica
 **Archivo:** ComplejidadLogaritmica.java
+**Definición:** La complejidad O(log n) aparece cuando el problema se reduce a la mitad en cada iteración. En este caso, el algoritmo disminuye progresivamente el valor de n, reduciendo rápidamente la cantidad de operaciones necesarias.
+**Relación:** Cada ciclo divide el valor de n entre 2.
 ```java
 public void ejemplo() {
-        System.out.println("Ejemplo O(log n):");
+        System.out.println("Ejemplo O(log n)");
+
+        int n = 16;
+
+        while (n > 1) {
+            System.out.println(n);
+            n = n / 2;
+        }
+    }
 }
 ```
+### Explicación de la complejidad
+- En cada iteración el valor se divide entre 2
+- El número de pasos necesarios es pequeño incluso si n es grande
+- No recorre todos los elementos, solo reduce el problema
 
 ---
 ### O(n log n) – Complejidad logarítmica lineal
 **Archivo:** ComplejidadNLogN.java
+**Definición:** La complejidad O(n log n) se obtiene cuando se combina un recorrido lineal con un proceso logarítmico. En este caso, el algoritmo recorre todos los elementos y, dentro de cada iteración, realiza una reducción progresiva del problema.
+**Relación:** 
+- El bucle externo recorre n elementos → O(n)
+- El bucle interno reduce el problema a la mitad → O(log n)
 ```java
 public void ejemplo() {
-        System.out.println("Ejemplo O(n log n):");
+
+        System.out.println("Ejemplo O(n log n)");
+
+        int n = 5;
+
+        // Parte O(n)
+        for (int i = 0; i < n; i++) {
+
+            System.out.println("Elemento " + i);
+
+            // Parte O(log n)
+            int temp = n;
+
+            while (temp > 1) {
+                System.out.println("  proceso interno: " + temp);
+                temp = temp / 2;
+            }
+        }
+    }
 }
 ```
+### Explicación de la complejidad
+- El bucle externo recorre n elementos (O(n))
+- El bucle interno reduce el problema a la mitad (O(log n))
+- La combinación de ambos genera O(n log n)
+- Es común en algoritmos de ordenamiento eficientes como Merge Sort
 
 ---
 
+## Conclusiones
 
+### ¿Qué complejidad es más costosa y por qué?
+
+La complejidad mas costosa vista en esta investigacion seria la O(n²), ya que uso de bucles anidados provoca que el numero de operaciones al aumentar el tamaño de los datos se eleve rapidamente más que en las demás, volviendola poco eficiente para grandes volumenes de información.
+
+### ¿Qué aprendieron del análisis?
+
+A partir del analisis realizado, se comprendio que un algoritmo no es eficiente simplemente porque funciona, ya que si este consume demaciados recursos su eficiencia sera minima, aunque este funcione. La eficiencia dependera de que tantos recursos necesite para funcionar, como pudimos ver un ciclo (O(n)) es manejable, pero al combinar ciclos o estructuras repetitivas, el costo de recursos aumenta considerablemente.
+
+### ¿Qué les sorprendió más al ver el código?
+
+De las cosas que mas relevantes fue el ver que pequenos cambios como, agregar un segundo bucle, o el dividir en cada intercección la complejidad del logaritmo cambiabla completamente. Ayudando a entender mejor las diferencias entre O(1), O(n), O(log n) y O(n log n).
+
+### Reflección final
+
+Consideramos que el análisis de la Teoria de la complejidad es fundamental en el desarrollo de software eficiente, especialmente cuando se trabaja con grandes volúmenes de datos. No solo se trata de que el programa funcione, sino de que lo haga de manera óptima. Por ello, es importante adquirir el hábito de analizar y mejorar los algoritmos desde etapas tempranas del desarrollo, así como seguir buenas prácticas en el uso de estructuras de datos.
