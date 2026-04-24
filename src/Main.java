@@ -1,8 +1,9 @@
 import complejidades.ComplejidadConstante;
-import complejidades.ComplejidadCuadratica;
 import complejidades.ComplejidadLineal;
+import complejidades.ComplejidadCuadratica;
 import complejidades.ComplejidadLogaritmica;
 import complejidades.ComplejidadNLogN;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
 
         while (opcion != 0) {
 
-            System.out.println("\nCOMPLEJIDADES");
+            System.out.println("\nCOMPLEJIDADES COMPUTACIONALES");
             System.out.println("1. O(1) - Constante");
             System.out.println("2. O(n) - Lineal");
             System.out.println("3. O(n^2) - Cuadrática");
@@ -23,7 +24,15 @@ public class Main {
             System.out.println("0. Salir");
 
             System.out.print("Elige una opción: ");
-            opcion = sc.nextInt();
+
+            // validación básica para evitar errores si meten letras
+            if (sc.hasNextInt()) {
+                opcion = sc.nextInt();
+            } else {
+                System.out.println("Entrada inválida. Debes ingresar un número.");
+                sc.next(); // limpia entrada incorrecta
+                continue;
+            }
 
             if (opcion == 1) {
                 System.out.println("\n O(1) - COMPLEJIDAD CONSTANTE ");
@@ -46,16 +55,16 @@ public class Main {
             }
 
             else if (opcion == 5) {
-                System.out.println("\n O(n log n) ");
+                System.out.println("\n O(n log n) - COMPLEJIDAD N LOG N ");
                 new ComplejidadNLogN().ejemplo();
             }
 
             else if (opcion == 0) {
-                System.out.println("Uated ha salido del programa");
+                System.out.println("Has salido del programa.");
             }
 
             else {
-                System.out.println("Opción inválida");
+                System.out.println("Opción inválida.");
             }
         }
 

@@ -3,11 +3,11 @@ package complejidades;
 public class ComplejidadLineal {
 
     /**
-     * Complejidad: O(n)
-     * El número de operaciones depende directamente de n
+     * Complejidad O(n)
+     * Recorre todos los elementos una sola vez.
      */
     public void ejemplo() {
-        System.out.println("Ejemplo O(n):");
+        System.out.println("Ejemplo O(n)");
 
         int n = 5;
 

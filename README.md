@@ -11,20 +11,20 @@
 ---
 ## **¿Qué es la Teoría de la Complejidad?**
 
-La teoría de la complejidad es una rama de la informática que analiza cómo aumenta el costo de un algoritmo a medida que crece el tamaño de su entrada. Para ello utiliza la notación Big-O, que describe el crecimiento del tiempo de ejecución y el uso de memoria. 
+La teoría de la complejidad computacional estudia cómo varían los recursos necesarios (tiempo y memoria) para resolver un problema en función del tamaño de la entrada.
 
-Su objetivo principal es comparar algoritmos y determinar cuál es más eficiente cuando los datos se vuelven grandes.
+Su objetivo es analizar la eficiencia de los algoritmos y determinar su comportamiento cuando los datos crecen, permitiendo comparar distintas soluciones de manera objetiva.
 
 ---
 ## **Eficiencia de algoritmos**
 
 ### Coste temporal
 
-Es el tiempo que tarda un algoritmo en ejecutarse dependiendo del tamaño de la entrada.
+Representa el tiempo de ejecución de un algoritmo según el tamaño de entrada (n).
 
 ### Coste espacial
 
-Es la cantidad de memoria que utiliza un algoritmo durante su ejecución.
+Representa la cantidad de memoria utilizada durante la ejecución.
 
 ## **Factores de tiempo de ejecución**
 
@@ -47,15 +47,15 @@ Son externos al algoritmo:
 
 ### Análisis teórico
 
-Se estudia el algoritmo sin ejecutarlo, usando matemáticas.
+Se basa en modelos matemáticos sin ejecutar el programa. Permite estimar el crecimiento del algoritmo.
 Permite estimar su comportamiento con notaciones como Big O:
--	O → peor caso 
--	Ω → mejor caso 
--	Θ → caso promedio 
+- O(n) → peor caso (límite superior)
+- Ω(n) → mejor caso (límite inferior)
+- Θ(n) → caso exacto (ajustado)
 
 ### Análisis experimental
 
-Consiste en ejecutar el programa y medir su tiempo real.
+Se mide el tiempo real ejecutando el algoritmo con distintos tamaños de entrada.
 Se prueba con diferentes tamaños de entrada (n = 100, 1000, 10000) para observar su crecimiento.
 
 ---
@@ -63,8 +63,7 @@ Se prueba con diferentes tamaños de entrada (n = 100, 1000, 10000) para observa
 
 ### ¿Qué es?
 
-La notación Big O es una forma matemática de describir cómo crecen los recursos que utiliza un algoritmo (tiempo o memoria) en función del tamaño de entrada n.
-Su objetivo es analizar el comportamiento del algoritmo cuando los datos aumentan, especialmente en escenarios grandes.
+La notación Big O describe el crecimiento del tiempo o memoria de un algoritmo en función del tamaño de entrada n, enfocándose en su comportamiento asintótico (cuando n es grande).
 
 ### Tipos de análisis (casos)
 
@@ -88,13 +87,21 @@ El tiempo no depende del tamaño de entrada.
 Crece proporcionalmente al tamaño de entrada.
 
 - O(n²) – Cuadrática
-Dos bucles anidados.
+Crecimiento cuadrático debido a bucles anidados.
 
 - O(log n) – Logarítmica
-Reduce el problema a la mitad en cada paso.
+El problema se reduce progresivamente (ej: dividir entre 2).
 
 - O(n log n)
-Combinación de recorrido + división del problema.
+Combinación de recorrido lineal + división del problema.
+
+---
+
+## Ejemplos
+
+- [Ejemplos de Complejidad](#ejemplos-de-complejidad-en-java)
+
+---
 
 ### En conclusión
 
@@ -142,10 +149,6 @@ Esto significa que el algoritmo recorre todos los elementos, pero realiza divisi
 
 ---
 
-## Ejemplos
-
-- [Ejemplos de Complejidad](#ejemplos-de-complejidad-en-java)
-
 ## Ejemplos de Complejidad en Java
 
 ### O(1) – Complejidad constante
@@ -185,7 +188,7 @@ public void ejemplo() {
 
 ---
 ### O(n log n) – Complejidad logarítmica lineal
-**Archivo:** ComplejidadNLongN.java
+**Archivo:** ComplejidadNLogN.java
 ```java
 public void ejemplo() {
         System.out.println("Ejemplo O(n log n):");
