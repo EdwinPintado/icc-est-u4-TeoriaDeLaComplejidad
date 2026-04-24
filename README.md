@@ -83,16 +83,21 @@ Representa el comportamiento esperado en condiciones normales.
 
 - O(1) – Constante
 El tiempo no depende del tamaño de entrada.
+
 - O(n) – Lineal
 Crece proporcionalmente al tamaño de entrada.
+
 - O(n²) – Cuadrática
 Dos bucles anidados.
+
 - O(log n) – Logarítmica
 Reduce el problema a la mitad en cada paso.
+
 - O(n log n)
 Combinación de recorrido + división del problema.
 
 ### En conclusión
+
 - La notación Big O es fundamental para diseñar algoritmos escalables y evitar que el rendimiento se degrade al aumentar la cantidad de datos.
 - Permite comparar soluciones y elegir la más eficiente antes de implementarla.
 
@@ -105,28 +110,88 @@ La complejidad O(1) significa que el tiempo o espacio que utiliza un algoritmo n
 Esto ocurre cuando el algoritmo ejecuta una cantidad fija de operaciones, sin depender de estructuras repetitivas o datos adicionales.
 
 ### O(n) – Complejidad lineal
+
 La complejidad O(n) significa que el tiempo de ejecución crece de forma proporcional al tamaño de la entrada.
 Si los datos aumentan, el número de operaciones aumenta en la misma proporción.
 
 ### O(n²) – Complejidad cuadrática
+
 La complejidad O(n²) ocurre cuando un algoritmo tiene dos bucles anidados, donde cada uno depende de n.
 Esto provoca que el número de operaciones crezca como n × n.
 
 ### O(log n) – Complejidad logarítmica
+
 La complejidad O(log n) ocurre cuando el problema se reduce a la mitad en cada paso.
 En lugar de revisar todos los elementos, el algoritmo descarta una gran parte del problema en cada iteración.
 Es muy eficiente en grandes volúmenes de información.
 
 ### O(n log n) – Complejidad logarítmica lineal
+
 La complejidad O(n log n) combina dos comportamientos:
 -	Un proceso lineal O(n)
 -	Un proceso logarítmico O(log n)
 Esto significa que el algoritmo recorre todos los elementos, pero realiza divisiones o procesos logarítmicos dentro de ese recorrido.
 
 ### En resumen:
+
 -	O(1) → constante (ideal)
 -	O(log n) → muy eficiente
 -	O(n) → crecimiento proporcional
 -	O(n log n) → eficiente para grandes datos
 -	O(n²) → ineficiente en grandes volúmenes
+
+---
+
+## Ejemplos
+
+- [Ejemplos de Complejidad](#ejemplos-de-complejidad-en-java)
+
+## Ejemplos de Complejidad en Java
+
+### O(1) – Complejidad constante
+**Archivo:** ComplejidadConstante.java
+```java
+public void ejemplo() {
+    System.out.println("Ejemplo O(1)");
+}
+```
+
+---
+### O(n) – Complejidad lineal
+**Archivo:** ComplejidadLineal.java
+```java
+public void ejemplo() {
+        System.out.println("Ejemplo O(n):");
+}
+```
+
+---
+### O(n²) – Complejidad cuadrática
+**Archivo:** ComplejidadCuadratica.java
+```java
+public void ejemplo() {
+        System.out.println("Ejemplo O(n^2):");
+}
+```
+
+---
+### O(log n) – Complejidad logarítmica
+**Archivo:** ComplejidadLogaritmica.java
+```java
+public void ejemplo() {
+        System.out.println("Ejemplo O(log n):");
+}
+```
+
+---
+### O(n log n) – Complejidad logarítmica lineal
+**Archivo:** ComplejidadNLongN.java
+```java
+public void ejemplo() {
+        System.out.println("Ejemplo O(n log n):");
+}
+```
+
+---
+
 
