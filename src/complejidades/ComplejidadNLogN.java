@@ -22,7 +22,7 @@ public class ComplejidadNLogN {
             int temp = n;
 
             while (temp > 1) {
-                System.out.println("  proceso interno: " + temp);
+                System.out.println("   Reducción: " + temp);
                 temp = temp / 2;
             }
         }

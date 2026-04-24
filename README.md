@@ -129,6 +129,17 @@ Esto significa que el algoritmo recorre todos los elementos, pero realiza divisi
 - La notación Big O es fundamental para diseñar algoritmos escalables y evitar que el rendimiento se degrade al aumentar la cantidad de datos.
 - Permite comparar soluciones y elegir la más eficiente antes de implementarla.
 
+## recursos visuales
+
+### Ejemplo de como funciona el programa
+![Modelo de ejecución](assets/modelo-ejecución.png)
+### Tabla comparativa entre complejidades
+![Tabla comparativa](assets/tabla-comparativa.png)
+### Imagen extraida de nuestra presentacion
+![Presentacion](assets/presentacion.png)
+### Imagen representariva de la reduccion logaritmica
+![Reduccion logaritmica](assets/reduccion-logaritmica.png)
+
 
 ---
 
@@ -266,16 +277,18 @@ public void ejemplo() {
 
 ### ¿Qué complejidad es más costosa y por qué?
 
-La complejidad mas costosa vista en esta investigacion seria la O(n²), ya que uso de bucles anidados provoca que el numero de operaciones al aumentar el tamaño de los datos se eleve rapidamente más que en las demás, volviendola poco eficiente para grandes volumenes de información.
+La complejidad más costosa analizada es O(n²), ya que el uso de bucles anidados provoca que el número de operaciones crezca de forma cuadrática. Esto significa que, al aumentar el tamaño de los datos, el tiempo de ejecución se incrementa rápidamente en comparación con otras complejidades, volviéndola poco eficiente para grandes volúmenes de información.
 
 ### ¿Qué aprendieron del análisis?
 
-A partir del analisis realizado, se comprendio que un algoritmo no es eficiente simplemente porque funciona, ya que si este consume demaciados recursos su eficiencia sera minima, aunque este funcione. La eficiencia dependera de que tantos recursos necesite para funcionar, como pudimos ver un ciclo (O(n)) es manejable, pero al combinar ciclos o estructuras repetitivas, el costo de recursos aumenta considerablemente.
+A partir del análisis realizado, se comprendió que un algoritmo no es eficiente únicamente porque funcione correctamente, sino por la cantidad de recursos que utiliza. Se observó que un solo ciclo (O(n)) es manejable, pero al combinar estructuras repetitivas como bucles anidados, el costo computacional aumenta considerablemente.
 
 ### ¿Qué les sorprendió más al ver el código?
 
-De las cosas que mas relevantes fue el ver que pequenos cambios como, agregar un segundo bucle, o el dividir en cada intercección la complejidad del logaritmo cambiabla completamente. Ayudando a entender mejor las diferencias entre O(1), O(n), O(log n) y O(n log n).
+Uno de los aspectos más relevantes fue observar cómo pequeños cambios en la estructura del código, como agregar un segundo bucle o reducir el valor en cada iteración, modifican completamente la complejidad del algoritmo. Esto permitió comprender de manera práctica las diferencias entre O(1), O(n), O(log n) y O(n log n).
 
 ### Reflección final
 
-Consideramos que el análisis de la Teoria de la complejidad es fundamental en el desarrollo de software eficiente, especialmente cuando se trabaja con grandes volúmenes de datos. No solo se trata de que el programa funcione, sino de que lo haga de manera óptima. Por ello, es importante adquirir el hábito de analizar y mejorar los algoritmos desde etapas tempranas del desarrollo, así como seguir buenas prácticas en el uso de estructuras de datos.
+Se concluye que el análisis de la teoría de la complejidad es fundamental en el desarrollo de software eficiente, especialmente cuando se trabaja con grandes volúmenes de datos. No se trata solo de que un programa funcione, sino de que lo haga de manera óptima. Por ello, es importante analizar los algoritmos desde etapas tempranas y seleccionar estructuras adecuadas que permitan un mejor rendimiento.
+
+
